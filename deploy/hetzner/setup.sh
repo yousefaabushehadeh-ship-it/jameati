@@ -15,9 +15,14 @@ if [ "$(id -u)" -ne 0 ]; then echo "شغّله بـ sudo"; exit 1; fi
 say() { printf '\n\033[1;36m==> %s\033[0m\n' "$*"; }
 
 # 1) Docker
-if ! command -v docker >/dev/null 2>&1; then
+if ! command -v docker >/dev/null 2>&1 || ! docker compose version >/dev/null 2>&1; then
   say "تنصيب Docker"
-  curl -fsSL https://get.docker.com | sh
+  if ! curl -fsSL https://get.docker.com | sh; then
+    echo "(سكربت Docker الرسمي ما زبط على هالنسخة، بنصّب من مستودعات Ubuntu)"
+    apt-get update -y
+    apt-get install -y docker.io docker-compose-v2 docker-buildx || apt-get install -y docker.io docker-compose-v2
+  fi
+  systemctl enable --now docker
 fi
 
 # 2) Swap (ضروري على السيرفرات الصغيرة، وبيساعد وقت بناء Java)
