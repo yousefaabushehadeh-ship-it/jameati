@@ -52,6 +52,9 @@ app:
     expanded-resource: ${OFFICIAL_EXPANDED_CATALOG_RESOURCE:data/official-expanded-catalog.json}
     supplemental-resource: ${OFFICIAL_SUPPLEMENTAL_CATALOG_RESOURCE:data/official-hourly-work-links.json}
     jordan-universities-resource: ${OFFICIAL_JORDAN_UNIVERSITIES_RESOURCE:data/official-jordan-universities.json}
+  test-accounts:
+    # حسابات V11 التجريبية (باسوورد معروف). مقفلة افتراضيًا على السيرفر.
+    enabled: ${TEST_ACCOUNTS_ENABLED:false}
   bootstrap-admin:
     enabled: ${BOOTSTRAP_ADMIN_ENABLED:false}
     email: ${BOOTSTRAP_ADMIN_EMAIL:}

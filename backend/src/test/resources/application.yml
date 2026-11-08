@@ -21,6 +21,8 @@ spring:
       max-file-size: 1MB
       max-request-size: 2MB
 app:
+  test-accounts:
+    enabled: true
   official-catalog:
     enabled: false
   bootstrap-admin:

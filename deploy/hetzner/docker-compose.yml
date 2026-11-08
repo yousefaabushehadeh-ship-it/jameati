@@ -1,0 +1,69 @@
+# جامعتي على سيرفر واحد: قاعدة بيانات + الباك إند + الموقع (Caddy مع HTTPS تلقائي)
+# التشغيل: من مجلد الريبو  →  docker compose -f deploy/hetzner/docker-compose.yml --env-file deploy/hetzner/.env up -d --build
+name: jameati
+
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: jameati
+      MYSQL_USER: jameati
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      TZ: UTC
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--innodb-buffer-pool-size=256M"]
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  api:
+    build: ../../backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:mysql://db:3306/jameati?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      DB_USERNAME: jameati
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      ANALYTICS_HASH_SECRET: ${ANALYTICS_HASH_SECRET}
+      INTEGRATION_API_KEY: ${INTEGRATION_API_KEY}
+      AUTH_COOKIE_SECURE: "true"
+      CORS_ALLOWED_ORIGINS: https://${SITE_DOMAIN}
+      MAIL_FRONTEND_URL: https://${SITE_DOMAIN}
+      MPGS_FRONTEND_RETURN_URL: https://${SITE_DOMAIN}
+      BOOTSTRAP_ADMIN_ENABLED: ${BOOTSTRAP_ADMIN_ENABLED:-false}
+      BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL:-}
+      BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
+      JAVA_TOOL_OPTIONS: "-Xmx1g -XX:+UseSerialGC"
+    volumes:
+      - api-data:/app/data
+
+  web:
+    build:
+      context: ../../frontend
+      dockerfile: ../deploy/hetzner/web.Dockerfile
+    restart: unless-stopped
+    depends_on: [api]
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  db-data:
+  api-data:
+  caddy-data:
+  caddy-config:

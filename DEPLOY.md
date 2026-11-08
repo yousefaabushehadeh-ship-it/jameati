@@ -1,5 +1,7 @@
 # نشر جامعتي (فرونت + باك إند)
 
+> **سيرفر مدفوع (Hetzner)؟** كل اشي على سيرفر واحد: شوف [deploy/hetzner/README.md](deploy/hetzner/README.md).
+
 ```
 frontend/  → Netlify   (React/Vite)
 backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
