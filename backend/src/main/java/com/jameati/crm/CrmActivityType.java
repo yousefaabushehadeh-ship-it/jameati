@@ -1,0 +1,17 @@
+package com.jameati.crm;
+
+public enum CrmActivityType {
+  CREATED,
+  NOTE,
+  CALL,
+  WHATSAPP,
+  EMAIL,
+  MEETING,
+  STATUS_CHANGED,
+  OWNER_CHANGED,
+  FOLLOW_UP_CREATED,
+  FOLLOW_UP_COMPLETED,
+  FOLLOW_UP_RESCHEDULED,
+  PAYMENT_UPDATED,
+  SYSTEM
+}

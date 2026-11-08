@@ -1,0 +1,132 @@
+{
+  "version": "official-hourly-work-links-2026-09-02.1",
+  "feedId": "official-hourly-work-links",
+  "completeSnapshot": true,
+  "verifiedAt": "2026-09-02",
+  "verifiedBy": "فريق تحرير جامعتي — ملف روابط العمل بالساعة",
+  "minimumCounts": {
+    "JOB": 3,
+    "ARTICLE": 1
+  },
+  "counts": {
+    "JOB": 3,
+    "ARTICLE": 1
+  },
+  "sourceVersions": [
+    "user-provided-hourly-work-workbook-2026-09-02"
+  ],
+  "records": [
+    {
+      "type": "JOB",
+      "sourceExternalKey": "hourly-work-portal:marn",
+      "slug": "marn-hourly-work-platform",
+      "title": "مرن — منصة للعمل المرن بالساعة",
+      "summary": "رابط مباشر إلى منصة مرن للباحثين عن فرص عمل مرنة بالساعة في السعودية، من دون نسخ الشواغر أو بيانات أصحابها.",
+      "content": "هذه بطاقة دليل للمنصة وليست إعلان وظيفة بعينه. استخدم الرابط الرسمي لاستعراض الفرص المتاحة وإنشاء حساب وقراءة متطلبات كل شاغر.\n\nقد تتغير المدن والقطاعات وحدود الساعات والأهلية وآلية التعاقد، لذلك راجع شروط مرن وإعلان صاحب العمل قبل قبول الفرصة، ولا ترسل بيانات حساسة خارج القنوات الرسمية.",
+      "category": "عمل مرن بالساعة",
+      "organization": "مرن",
+      "country": "السعودية",
+      "image": null,
+      "website": "https://marn.io/job-seeker/",
+      "featured": false,
+      "published": true,
+      "rating": null,
+      "meta": "منصة عربية · عمل مرن بالساعة · بحث خارجي",
+      "sourceName": "مرن",
+      "sourceUrl": "https://marn.io/job-seeker/",
+      "officialUrl": "https://marn.io/job-seeker/",
+      "verifiedAt": "2026-09-02",
+      "license": null,
+      "attributes": {
+        "recordKind": "hourly-work-portal",
+        "publicSourceLink": true,
+        "listingsCopied": false,
+        "language": "ar"
+      }
+    },
+    {
+      "type": "JOB",
+      "sourceExternalKey": "remote-work-portal:teleworks-sa",
+      "slug": "teleworks-sa-remote-work-platform",
+      "title": "تيليوركس — بوابة العمل عن بُعد في السعودية",
+      "summary": "رابط إلى بوابة تيليوركس العربية لمتابعة مسارات وفرص العمل عن بُعد في السعودية من مصدرها مباشرة.",
+      "content": "هذه بطاقة دليل للبوابة وليست شاغرًا منسوخًا ولا ضمانًا لتوفر وظيفة حاليًا. افتح الموقع الرسمي لمعرفة الخدمات والفرص النشطة ومتطلبات التسجيل.\n\nتختلف الأهلية ونوع العقد ومكان الإقامة وساعات العمل من إعلان إلى آخر؛ إعلان الجهة المشغلة وشروط المنصة هما المرجع النهائي قبل مشاركة المستندات أو قبول العرض.",
+      "category": "عمل عن بعد",
+      "organization": "تيليوركس",
+      "country": "السعودية",
+      "image": null,
+      "website": "https://teleworks.sa/ar/",
+      "featured": false,
+      "published": true,
+      "rating": null,
+      "meta": "بوابة عربية · عمل عن بُعد · بحث خارجي",
+      "sourceName": "Teleworks",
+      "sourceUrl": "https://teleworks.sa/ar/",
+      "officialUrl": "https://teleworks.sa/ar/",
+      "verifiedAt": "2026-09-02",
+      "license": null,
+      "attributes": {
+        "recordKind": "remote-work-portal",
+        "publicSourceLink": true,
+        "listingsCopied": false,
+        "language": "ar"
+      }
+    },
+    {
+      "type": "JOB",
+      "sourceExternalKey": "freelance-portal:peopleperhour",
+      "slug": "peopleperhour-freelance-platform",
+      "title": "PeoplePerHour — Freelance work platform",
+      "summary": "Direct link to PeoplePerHour for finding international freelance work paid by the hour or project; individual listings and user profiles are not copied.",
+      "content": "This is a directory card for the platform, not a specific job advertisement. Use the official website to inspect current projects, create a profile, and read each client's scope and requirements.\n\nAvailability, service fees, payment protection, location restrictions, and project terms can change. Review the platform rules and the original project before submitting a proposal or sharing personal information.",
+      "category": "منصة عمل حر",
+      "organization": "PeoplePerHour",
+      "country": "عالمي",
+      "image": null,
+      "website": "https://www.peopleperhour.com/",
+      "featured": false,
+      "published": true,
+      "rating": null,
+      "meta": "Global platform · Hourly or project work · External search",
+      "sourceName": "PeoplePerHour",
+      "sourceUrl": "https://www.peopleperhour.com/",
+      "officialUrl": "https://www.peopleperhour.com/",
+      "verifiedAt": "2026-09-02",
+      "license": null,
+      "attributes": {
+        "recordKind": "freelance-portal",
+        "publicSourceLink": true,
+        "listingsCopied": false,
+        "language": "en"
+      }
+    },
+    {
+      "type": "ARTICLE",
+      "sourceExternalKey": "career-guide:fedniy-hourly-work-platforms",
+      "slug": "fedniy-guide-hourly-work-platforms",
+      "title": "دليل منصات العمل بالساعة من فدني",
+      "summary": "مقال عربي يجمع أمثلة لمنصات العمل بالساعة والعمل الحر؛ أُدرج كمصدر إرشادي لا كمنصة توظيف أو إعلان وظيفة.",
+      "content": "يقدم المقال قائمة تعريفية بمنصات عربية وعالمية يمكن أن تساعد الباحث عن عمل بالساعة أو بالمشروع على بدء بحثه. المحتوى طرف ثالث وقد تتغير الروابط أو الشروط بعد النشر.\n\nاستخدمه كنقطة انطلاق فقط، ثم انتقل إلى الموقع الرسمي لكل منصة للتحقق من التوفر والرسوم وحماية الدفع ومتطلبات البلد. لا تدفع مقابل وعد بالتوظيف ولا تشارك بيانات حساسة عبر جهة غير موثقة.",
+      "category": "المسار المهني",
+      "organization": "فدني",
+      "country": "عالمي",
+      "image": null,
+      "website": "https://fedniy.com/2638/%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D8%A3%D9%87%D9%85-%D9%85%D9%86%D8%B5%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A8%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/",
+      "featured": false,
+      "published": true,
+      "rating": null,
+      "meta": "مقال إرشادي · عمل بالساعة · تحقق من المنصات الأصلية",
+      "sourceName": "فدني",
+      "sourceUrl": "https://fedniy.com/2638/%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D8%A3%D9%87%D9%85-%D9%85%D9%86%D8%B5%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A8%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/",
+      "officialUrl": "https://fedniy.com/2638/%D8%AA%D8%B9%D8%B1%D9%81-%D8%B9%D9%84%D9%89-%D8%A3%D9%87%D9%85-%D9%85%D9%86%D8%B5%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A8%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/",
+      "verifiedAt": "2026-09-02",
+      "license": null,
+      "attributes": {
+        "recordKind": "career-guide",
+        "publicSourceLink": true,
+        "listingsCopied": false,
+        "language": "ar"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+package com.jameati.onboarding;
+
+public enum UserGoal {
+  CHOOSE_MAJOR,
+  FIND_UNIVERSITY,
+  FIND_SCHOLARSHIP,
+  FIND_INTERNSHIP,
+  FIND_JOB,
+  FIND_REMOTE_JOB,
+  DEVELOP_SKILLS,
+  STUDY_ABROAD
+}

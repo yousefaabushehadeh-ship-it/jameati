@@ -1,0 +1,31 @@
+{
+  "feedId": "official-expanded-catalog",
+  "version": "expanded-fixture-v1",
+  "completeSnapshot": true,
+  "minimumCounts": { "UNIVERSITY": 1 },
+  "records": [
+    {
+      "type": "UNIVERSITY",
+      "sourceExternalKey": "ror:https://ror.org/05k89ew48",
+      "sourceFingerprint": "ror-fixture",
+      "slug": "ror-university-of-jordan",
+      "title": "University of Jordan",
+      "summary": "Legacy ROR record.",
+      "content": "Legacy ROR record.",
+      "category": "جامعة أو مؤسسة تعليم عالٍ",
+      "organization": "University of Jordan",
+      "country": "الأردن",
+      "image": null,
+      "website": "https://example.com/ror-university-of-jordan",
+      "featured": false,
+      "published": true,
+      "rating": null,
+      "meta": "Jordan",
+      "sourceName": "ROR",
+      "sourceUrl": "https://ror.org/05k89ew48",
+      "officialUrl": "https://example.com/ror-university-of-jordan",
+      "verifiedAt": "2026-09-07",
+      "attributes": { "rorId": "https://ror.org/05k89ew48" }
+    }
+  ]
+}

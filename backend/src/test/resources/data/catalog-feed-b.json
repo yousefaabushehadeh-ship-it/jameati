@@ -1,0 +1,32 @@
+{
+  "feedId": "feed-b",
+  "version": "feed-b-v1",
+  "minimumCounts": {
+    "UNIVERSITY": 1
+  },
+  "records": [
+    {
+      "type": "UNIVERSITY",
+      "sourceExternalKey": "university-new",
+      "sourceFingerprint": "university-fingerprint",
+      "slug": "university-new",
+      "title": "جامعة جديدة",
+      "summary": "سجل تعريفي لجامعة جديدة.",
+      "content": "تفاصيل الجامعة.",
+      "category": "جامعة أو مؤسسة تعليم عالٍ",
+      "organization": "جامعة جديدة",
+      "country": "فلسطين",
+      "image": null,
+      "website": "https://example.com/university-new",
+      "featured": false,
+      "published": true,
+      "rating": null,
+      "meta": "جامعة",
+      "sourceName": "مصدر اختباري",
+      "sourceUrl": "https://example.com/source",
+      "officialUrl": "https://example.com/university-new",
+      "verifiedAt": "2026-09-02",
+      "attributes": { "rorId": "https://ror.org/example" }
+    }
+  ]
+}

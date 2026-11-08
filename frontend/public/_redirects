@@ -1,0 +1,5 @@
+# الباك إند لسا مش منشور: أي طلب API بيرجع رسالة واضحة بدل صفحة HTML.
+# لما ينشر الباك إند، استبدل هالسطر بـ:  /api/*  https://YOUR-BACKEND/api/:splat  200
+/api/*   /api-offline.json   404!
+# React Router: كل المسارات بترجع index.html
+/*       /index.html         200

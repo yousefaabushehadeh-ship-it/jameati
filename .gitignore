@@ -1,0 +1,9 @@
+node_modules/
+dist/
+target/
+.idea/
+.DS_Store
+.env
+.netlify/
+data/media/
+data/membership-receipts/

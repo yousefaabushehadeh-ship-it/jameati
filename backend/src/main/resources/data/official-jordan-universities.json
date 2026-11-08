@@ -1,0 +1,258 @@
+{
+  "feedId": "official-jordan-universities",
+  "version": "official-jordan-universities-2026-09-07.1",
+  "verifiedAt": "2026-09-07T00:00:00Z",
+  "verifiedBy": "فريق تحرير جامعتي — دليل Study in Jordan الرسمي",
+  "completeSnapshot": true,
+  "minimumCounts": { "UNIVERSITY": 31 },
+  "records": [
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:university-of-jordan", "slug": "jordan-university-university-of-jordan",
+      "title": "الجامعة الأردنية", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في الجبيهة، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "الجامعة الأردنية", "country": "الأردن", "image": null, "website": "https://www.ju.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "الجبيهة، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.ju.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "University of Jordan", "city": "عمّان", "location": "الجبيهة، عمّان، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.ju.edu.jo/", "publicSourceLink": true, "displayOrder": 1, "rorId": "https://ror.org/05k89ew48" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:yarmouk-university", "slug": "jordan-university-yarmouk-university",
+      "title": "جامعة اليرموك", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في إربد.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة اليرموك", "country": "الأردن", "image": null, "website": "https://www.yu.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "إربد، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.yu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Yarmouk University", "city": "إربد", "location": "إربد، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.yu.edu.jo/", "publicSourceLink": true, "displayOrder": 2, "rorId": "https://ror.org/004mbaj56" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:mutah-university", "slug": "jordan-university-mutah-university",
+      "title": "جامعة مؤتة", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في مؤتة بمحافظة الكرك.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة مؤتة", "country": "الأردن", "image": null, "website": "https://www.mutah.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "مؤتة، الكرك، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.mutah.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Mutah University", "city": "الكرك", "location": "مؤتة، الكرك، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.mutah.edu.jo/", "publicSourceLink": true, "displayOrder": 3, "rorId": "https://ror.org/008g9ns82" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:jordan-university-of-science-and-technology", "slug": "jordan-university-science-and-technology",
+      "title": "جامعة العلوم والتكنولوجيا الأردنية", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في الرمثا بمحافظة إربد.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة العلوم والتكنولوجيا الأردنية", "country": "الأردن", "image": null, "website": "https://www.just.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "الرمثا، إربد، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.just.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Jordan University of Science and Technology", "city": "الرمثا", "location": "الرمثا، محافظة إربد، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.just.edu.jo/", "publicSourceLink": true, "displayOrder": 4, "rorId": "https://ror.org/03y8mtb59" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:hashemite-university", "slug": "jordan-university-hashemite-university",
+      "title": "الجامعة الهاشمية", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في الزرقاء.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "الجامعة الهاشمية", "country": "الأردن", "image": null, "website": "https://hu.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "الزرقاء، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://hu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "The Hashemite University", "city": "الزرقاء", "location": "الزرقاء، الأردن", "institutionType": "حكومية", "admissionUrl": "https://hu.edu.jo/", "publicSourceLink": true, "displayOrder": 5, "rorId": "https://ror.org/04a1r5z94" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:al-al-bayt-university", "slug": "jordan-university-al-al-bayt-university",
+      "title": "جامعة آل البيت", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في المفرق.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة آل البيت", "country": "الأردن", "image": null, "website": "https://www.aabu.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "المفرق، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.aabu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Al al-Bayt University", "city": "المفرق", "location": "المفرق، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.aabu.edu.jo/", "publicSourceLink": true, "displayOrder": 6, "rorId": "https://ror.org/028jh2126" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:al-balqa-applied-university", "slug": "jordan-university-al-balqa-applied-university",
+      "title": "جامعة البلقاء التطبيقية", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في السلط ولها فروع متعددة.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة البلقاء التطبيقية", "country": "الأردن", "image": null, "website": "https://www.bau.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "السلط، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.bau.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Al-Balqa Applied University", "city": "السلط", "location": "السلط، الأردن — الحرم الرئيسي وفروع متعددة", "institutionType": "حكومية", "admissionUrl": "https://www.bau.edu.jo/", "publicSourceLink": true, "displayOrder": 7, "rorId": "https://ror.org/00qedmt22" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:al-hussein-bin-talal-university", "slug": "jordan-university-al-hussein-bin-talal-university",
+      "title": "جامعة الحسين بن طلال", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في معان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة الحسين بن طلال", "country": "الأردن", "image": null, "website": "https://www.ahu.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "معان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.ahu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Al-Hussein Bin Talal University", "city": "معان", "location": "معان، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.ahu.edu.jo/", "publicSourceLink": true, "displayOrder": 8, "rorId": "https://ror.org/019dkd780" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:tafila-technical-university", "slug": "jordan-university-tafila-technical-university",
+      "title": "جامعة الطفيلة التقنية", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي في العيس بمحافظة الطفيلة.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "جامعة الطفيلة التقنية", "country": "الأردن", "image": null, "website": "https://www.ttu.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "العيس، الطفيلة، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.ttu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Tafila Technical University", "city": "الطفيلة", "location": "العيس، الطفيلة، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.ttu.edu.jo/", "publicSourceLink": true, "displayOrder": 9, "rorId": "https://ror.org/04jzmk773" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:german-jordanian-university", "slug": "jordan-university-german-jordanian-university",
+      "title": "الجامعة الألمانية الأردنية", "summary": "جامعة أردنية حكومية يقع حرمها الرئيسي على طريق عمّان–مادبا.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة حكومية", "organization": "الجامعة الألمانية الأردنية", "country": "الأردن", "image": null, "website": "https://www.gju.edu.jo/", "featured": true, "published": true, "rating": null, "meta": "مادبا، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.gju.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "German Jordanian University", "city": "مادبا", "location": "طريق عمّان–مادبا، مادبا، الأردن", "institutionType": "حكومية", "admissionUrl": "https://www.gju.edu.jo/", "publicSourceLink": true, "displayOrder": 10, "rorId": "https://ror.org/02jgpyd84" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:amman-arab-university", "slug": "jordan-university-amman-arab-university",
+      "title": "جامعة عمان العربية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في موبص، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة عمان العربية", "country": "الأردن", "image": null, "website": "https://www.aau.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "موبص، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.aau.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Amman Arab University", "city": "عمّان", "location": "موبص، شارع الأردن، عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.aau.edu.jo/", "publicSourceLink": true, "displayOrder": 11, "rorId": "https://ror.org/039xekb14" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:middle-east-university", "slug": "jordan-university-middle-east-university",
+      "title": "جامعة الشرق الأوسط", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة الشرق الأوسط", "country": "الأردن", "image": null, "website": "https://www.meu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.meu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Middle East University", "city": "عمّان", "location": "عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.meu.edu.jo/", "publicSourceLink": true, "displayOrder": 12, "rorId": "https://ror.org/059bgad73" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:jadara-university", "slug": "jordan-university-jadara-university",
+      "title": "جامعة جدارا", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في إربد.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة جدارا", "country": "الأردن", "image": null, "website": "https://www.jadara.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "إربد، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.jadara.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Jadara University", "city": "إربد", "location": "طريق النعيمة، إربد، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.jadara.edu.jo/", "publicSourceLink": true, "displayOrder": 13, "rorId": "https://ror.org/001drnv35" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:al-ahliyya-amman-university", "slug": "jordan-university-al-ahliyya-amman-university",
+      "title": "جامعة عمان الأهلية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق السلط غرب عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة عمان الأهلية", "country": "الأردن", "image": null, "website": "https://www.ammanu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "طريق السلط، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.ammanu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Al-Ahliyya Amman University", "city": "عمّان", "location": "طريق السلط، غرب عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.ammanu.edu.jo/", "publicSourceLink": true, "displayOrder": 14, "rorId": "https://ror.org/00xddhq60" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:applied-science-private-university", "slug": "jordan-university-applied-science-private-university",
+      "title": "جامعة العلوم التطبيقية الخاصة", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في شفا بدران، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة العلوم التطبيقية الخاصة", "country": "الأردن", "image": null, "website": "https://www.asu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "شفا بدران، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.asu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Applied Science Private University", "city": "عمّان", "location": "شفا بدران، عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.asu.edu.jo/", "publicSourceLink": true, "displayOrder": 15, "rorId": "https://ror.org/01ah6nb52" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:philadelphia-university", "slug": "jordan-university-philadelphia-university",
+      "title": "جامعة فيلادلفيا", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق جرش شمال عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة فيلادلفيا", "country": "الأردن", "image": null, "website": "https://www.philadelphia.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "طريق جرش، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.philadelphia.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Philadelphia University", "city": "عمّان", "location": "طريق جرش، شمال عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.philadelphia.edu.jo/", "publicSourceLink": true, "displayOrder": 16, "rorId": "https://ror.org/05mqvn149" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:isra-university", "slug": "jordan-university-isra-university",
+      "title": "جامعة الإسراء", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق مطار الملكة علياء جنوب عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة الإسراء", "country": "الأردن", "image": null, "website": "https://www.iu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "جنوب عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.iu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Isra University", "city": "عمّان", "location": "طريق مطار الملكة علياء، جنوب عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.iu.edu.jo/", "publicSourceLink": true, "displayOrder": 17, "rorId": "https://ror.org/04d4bt482" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:university-of-petra", "slug": "jordan-university-university-of-petra",
+      "title": "جامعة البترا", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة البترا", "country": "الأردن", "image": null, "website": "https://www.uop.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.uop.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "University of Petra", "city": "عمّان", "location": "عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.uop.edu.jo/", "publicSourceLink": true, "displayOrder": 18, "rorId": "https://ror.org/039d9es10" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:al-zaytoonah-university", "slug": "jordan-university-al-zaytoonah-university",
+      "title": "جامعة الزيتونة الأردنية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق المطار في عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة الزيتونة الأردنية", "country": "الأردن", "image": null, "website": "https://www.zuj.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "طريق المطار، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.zuj.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Al-Zaytoonah University of Jordan", "city": "عمّان", "location": "طريق المطار، عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.zuj.edu.jo/", "publicSourceLink": true, "displayOrder": 19, "rorId": "https://ror.org/04a5b0p13" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:zarqa-university", "slug": "jordan-university-zarqa-university",
+      "title": "جامعة الزرقاء", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في الزرقاء.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة الزرقاء", "country": "الأردن", "image": null, "website": "https://zu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "الزرقاء، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://zu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Zarqa University", "city": "الزرقاء", "location": "الزرقاء، الأردن", "institutionType": "خاصة", "admissionUrl": "https://zu.edu.jo/", "publicSourceLink": true, "displayOrder": 20, "rorId": "https://ror.org/01wf1es90" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:irbid-national-university", "slug": "jordan-university-irbid-national-university",
+      "title": "جامعة إربد الأهلية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في إربد.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة إربد الأهلية", "country": "الأردن", "image": null, "website": "https://inu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "إربد، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://inu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Irbid National University", "city": "إربد", "location": "إربد، الأردن", "institutionType": "خاصة", "admissionUrl": "https://inu.edu.jo/", "publicSourceLink": true, "displayOrder": 21, "rorId": "https://ror.org/00xfxvy87" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:jerash-university", "slug": "jordan-university-jerash-university",
+      "title": "جامعة جرش", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق عمّان–إربد الدولي في جرش.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة جرش", "country": "الأردن", "image": null, "website": "https://www.jpu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "جرش، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.jpu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Jerash University", "city": "جرش", "location": "طريق عمّان–إربد الدولي، جرش، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.jpu.edu.jo/", "publicSourceLink": true, "displayOrder": 22, "rorId": "https://ror.org/047mw5m74" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:princess-sumaya-university", "slug": "jordan-university-princess-sumaya-university",
+      "title": "جامعة الأميرة سمية للتكنولوجيا", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في الجبيهة، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة الأميرة سمية للتكنولوجيا", "country": "الأردن", "image": null, "website": "https://www.psut.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "الجبيهة، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.psut.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Princess Sumaya University for Technology", "city": "عمّان", "location": "الجبيهة، عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.psut.edu.jo/", "publicSourceLink": true, "displayOrder": 23, "rorId": "https://ror.org/01jy46q10" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:american-university-of-madaba", "slug": "jordan-university-american-university-of-madaba",
+      "title": "الجامعة الأمريكية في مادبا", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في مادبا.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "الجامعة الأمريكية في مادبا", "country": "الأردن", "image": null, "website": "https://www.aum.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "مادبا، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.aum.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "American University of Madaba", "city": "مادبا", "location": "مادبا، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.aum.edu.jo/", "publicSourceLink": true, "displayOrder": 24, "rorId": "https://ror.org/04tgeej53" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:ajloun-national-university", "slug": "jordan-university-ajloun-national-university",
+      "title": "جامعة عجلون الوطنية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في عجلون.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة عجلون الوطنية", "country": "الأردن", "image": null, "website": "https://www.anu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "عجلون، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.anu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Ajloun National University", "city": "عجلون", "location": "عجلون، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.anu.edu.jo/", "publicSourceLink": true, "displayOrder": 25, "rorId": "https://ror.org/01m28kg79" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:aqaba-university-of-technology", "slug": "jordan-university-aqaba-university-of-technology",
+      "title": "جامعة العقبة للتكنولوجيا", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق الموانئ في العقبة.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة العقبة للتكنولوجيا", "country": "الأردن", "image": null, "website": "https://www.aut.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "العقبة، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.aut.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Aqaba University of Technology", "city": "العقبة", "location": "طريق الموانئ، العقبة، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.aut.edu.jo/", "publicSourceLink": true, "displayOrder": 26, "rorId": "https://ror.org/03ernr789" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:aqaba-medical-sciences-university", "slug": "jordan-university-aqaba-medical-sciences-university",
+      "title": "جامعة العقبة للعلوم الطبية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي على طريق الموانئ في العقبة.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة العقبة للعلوم الطبية", "country": "الأردن", "image": null, "website": "https://www.amsu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "العقبة، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.amsu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Aqaba Medical Sciences University", "city": "العقبة", "location": "طريق الموانئ، العقبة، الأردن", "institutionType": "خاصة", "admissionUrl": "https://www.amsu.edu.jo/", "publicSourceLink": true, "displayOrder": 27 }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:ibn-sina-university", "slug": "jordan-university-ibn-sina-university",
+      "title": "جامعة ابن سينا للعلوم الطبية", "summary": "جامعة أردنية خاصة يقع حرمها الرئيسي في القسطل على طريق المطار، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة خاصة", "organization": "جامعة ابن سينا للعلوم الطبية", "country": "الأردن", "image": null, "website": "https://isums.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "القسطل، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://isums.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Ibn Sina University for Medical Sciences", "city": "عمّان", "location": "القسطل، طريق المطار، عمّان، الأردن", "institutionType": "خاصة", "admissionUrl": "https://isums.edu.jo/", "publicSourceLink": true, "displayOrder": 28, "rorId": "https://ror.org/053zh1547" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:world-islamic-sciences-university", "slug": "jordan-university-world-islamic-sciences-university",
+      "title": "جامعة العلوم الإسلامية العالمية", "summary": "جامعة أردنية ذات قانون خاص يقع حرمها الرئيسي في طبربور، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة ذات قانون خاص", "organization": "جامعة العلوم الإسلامية العالمية", "country": "الأردن", "image": null, "website": "https://www.wise.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "طبربور، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.wise.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "World Islamic Sciences and Education University", "city": "عمّان", "location": "طبربور، عمّان، الأردن", "institutionType": "ذات قانون خاص", "admissionUrl": "https://www.wise.edu.jo/", "publicSourceLink": true, "displayOrder": 29, "rorId": "https://ror.org/051mkwn17" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:al-hussein-technical-university", "slug": "jordan-university-al-hussein-technical-university",
+      "title": "جامعة الحسين التقنية", "summary": "جامعة أردنية ذات قانون خاص يقع حرمها الرئيسي في مجمع الملك الحسين للأعمال، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة ذات قانون خاص", "organization": "جامعة الحسين التقنية", "country": "الأردن", "image": null, "website": "https://www.htu.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.htu.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Al-Hussein Technical University", "city": "عمّان", "location": "مجمع الملك الحسين للأعمال، عمّان، الأردن", "institutionType": "ذات قانون خاص", "admissionUrl": "https://www.htu.edu.jo/", "publicSourceLink": true, "displayOrder": 30, "rorId": "https://ror.org/04jvdr241" }
+    },
+    {
+      "type": "UNIVERSITY", "sourceExternalKey": "study-in-jordan:arab-open-university-jordan", "slug": "jordan-university-arab-open-university",
+      "title": "الجامعة العربية المفتوحة – الأردن", "summary": "جامعة إقليمية يقع فرعها الأردني الرئيسي في طارق، عمّان.",
+      "content": "يعرض هذا الدليل الموقع الجغرافي والرابط الرسمي للحرم الرئيسي وفق قائمة مؤسسات التعليم العالي في الأردن. راجع موقع الجامعة للتخصصات وشروط القبول والمواعيد المحدثة.",
+      "category": "جامعة إقليمية", "organization": "الجامعة العربية المفتوحة – الأردن", "country": "الأردن", "image": null, "website": "https://www.aou.edu.jo/", "featured": false, "published": true, "rating": null, "meta": "طارق، عمّان، الأردن",
+      "sourceName": "Study in Jordan — وزارة التعليم العالي والبحث العلمي", "sourceUrl": "https://studyinjordan.jo/UnivCategoryEn.aspx", "officialUrl": "https://www.aou.edu.jo/", "verifiedAt": "2026-09-07",
+      "attributes": { "englishName": "Arab Open University – Jordan", "city": "عمّان", "location": "طارق، شارع الشيباني، عمّان، الأردن", "institutionType": "إقليمية", "admissionUrl": "https://www.aou.edu.jo/", "publicSourceLink": true, "displayOrder": 31, "rorId": "https://ror.org/02asgt557" }
+    }
+  ]
+}
