@@ -11,7 +11,7 @@
 بـ Hetzner Cloud → **Add Server**:
 - Location: Falkenstein أو Nuremberg أو Helsinki
 - Image: **Ubuntu 24.04**
-- Type: **CX23** (2 vCPU / 4GB) أو أكبر
+- Type: **CX23** (2 vCPU / 4GB) أو أكبر. بيشتغل كمان على سيرفر **1GB** (السكربت بيعمل swap 4GB وبيخفف إعدادات Java و MySQL لحاله)، بس بيكون أبطأ. بتقدر تكبّره بعدين من **Rescale** بدون ما تخسر البيانات.
 - SSH key: ضيف مفتاحك، أو خليه يبعتلك باسوورد root على الإيميل
 - خلي IPv4 مفعّل
 

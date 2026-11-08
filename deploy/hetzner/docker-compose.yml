@@ -12,7 +12,7 @@ services:
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
       TZ: UTC
-    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--innodb-buffer-pool-size=256M"]
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci", "--innodb-buffer-pool-size=${MYSQL_BUFFER_POOL:-256M}", "--performance-schema=${MYSQL_PERF_SCHEMA:-ON}"]
     volumes:
       - db-data:/var/lib/mysql
     healthcheck:
@@ -41,7 +41,7 @@ services:
       BOOTSTRAP_ADMIN_ENABLED: ${BOOTSTRAP_ADMIN_ENABLED:-false}
       BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL:-}
       BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
-      JAVA_TOOL_OPTIONS: "-Xmx1g -XX:+UseSerialGC"
+      JAVA_TOOL_OPTIONS: ${JAVA_OPTS:--Xmx1g -XX:+UseSerialGC}
     volumes:
       - api-data:/app/data
 

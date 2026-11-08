@@ -20,10 +20,12 @@ if ! command -v docker >/dev/null 2>&1; then
   curl -fsSL https://get.docker.com | sh
 fi
 
-# 2) Swap (يساعد وقت بناء Java على سيرفر 4GB)
+# 2) Swap (ضروري على السيرفرات الصغيرة، وبيساعد وقت بناء Java)
+MEM_MB=$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)
+SWAP_GB=2; [ "$MEM_MB" -lt 2500 ] && SWAP_GB=4
 if ! swapon --show | grep -q .; then
-  say "عمل swap بحجم 2GB"
-  fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile >/dev/null && swapon /swapfile
+  say "عمل swap بحجم ${SWAP_GB}GB"
+  fallocate -l "${SWAP_GB}G" /swapfile && chmod 600 /swapfile && mkswap /swapfile >/dev/null && swapon /swapfile
   grep -q '/swapfile' /etc/fstab || echo '/swapfile none swap sw 0 0' >> /etc/fstab
 fi
 
@@ -53,6 +55,12 @@ DB_ROOT_PASSWORD=$(rnd 16)
 JWT_SECRET=$(rnd 32)
 ANALYTICS_HASH_SECRET=$(rnd 32)
 INTEGRATION_API_KEY=$(rnd 24)
+$(if [ "$MEM_MB" -lt 2500 ]; then
+  echo "# سيرفر صغير (${MEM_MB}MB): إعدادات توفير ذاكرة"
+  echo "JAVA_OPTS=\"-Xmx448m -Xss512k -XX:MaxMetaspaceSize=160m -XX:+UseSerialGC -XX:TieredStopAtLevel=1\""
+  echo "MYSQL_BUFFER_POOL=64M"
+  echo "MYSQL_PERF_SCHEMA=OFF"
+fi)
 BOOTSTRAP_ADMIN_ENABLED=$([ -n "$ADMIN_EMAIL" ] && echo true || echo false)
 BOOTSTRAP_ADMIN_EMAIL=$ADMIN_EMAIL
 BOOTSTRAP_ADMIN_PASSWORD=$ADMIN_PASSWORD
