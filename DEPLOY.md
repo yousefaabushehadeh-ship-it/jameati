@@ -50,3 +50,44 @@ backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
 - Publish directory: `frontend/dist`
 
 بعدها أي push للريبو بينشر الاثنين تلقائيًا.
+
+---
+
+## استقبال الفرص من واتساب (Tab)
+
+السيرفر فيه رابط بيستقبل الفرص كـ JSON وبيحفظها **مسودات** (مش منشورة) لحد ما الأدمن يوافق.
+
+- الرابط: `POST https://<render-domain>/api/v1/integrations/opportunities`
+- الهيدر: `X-API-Key: <قيمة INTEGRATION_API_KEY من Render → Environment>`
+- `Content-Type: application/json`
+
+مثال (فرصة وحدة، أو مصفوفة لحد 50 فرصة):
+
+```json
+{
+  "title": "منحة جامعة X لدراسة الماجستير",
+  "organization": "جامعة X",
+  "deadline": "2027-01-15",
+  "link": "https://example.org/apply",
+  "type": "scholarship",
+  "funding": "FULLY_FUNDED",
+  "country": "ألمانيا",
+  "description": "نص المنشور أو ملخصه",
+  "source": "اسم جروب الواتساب"
+}
+```
+
+- المطلوب بس `title`. الباقي اختياري.
+- `type`: scholarship / training / volunteering / fellowship / exchange / conference / job (أو بالعربي).
+- `funding`: FULLY_FUNDED / PARTIALLY_FUNDED / SELF_FUNDED / FREE / PAID (أو "ممولة بالكامل"…).
+- `deadline` بصيغة `YYYY-MM-DD`؛ لو نص حر بينحفظ كنص.
+- التكرار: نفس الرابط، أو نفس العنوان + الجهة ⇒ `duplicate` وما بتنضاف. اللي حذفها الأدمن ما بترجع.
+
+الرد: `{ "data": { "created": 1, "duplicates": 0, "rejected": 0, "results": [ { "status": "created", "id": 12, ... } ] } }`
+
+### الموافقة على المسودات
+1. أنشئ حساب أدمن: بـ Render → Environment ضيف
+   `BOOTSTRAP_ADMIN_ENABLED=true` و `BOOTSTRAP_ADMIN_EMAIL=...` و `BOOTSTRAP_ADMIN_PASSWORD=...` (12 حرف أو أكثر)،
+   بإيميل **ما انسجّل فيه قبل**. (لو فعّلت ENABLED بدون الإيميل والباسوورد السيرفر ما بيشتغل.)
+2. سجّل دخول بالموقع بهالحساب، رح يطلعلك زر **المسودات** فوق (أو افتح `/admin/drafts`).
+3. لكل فرصة: عدّل التصنيف/التمويل إذا بدك، واضغط **نشر** أو **حذف**.

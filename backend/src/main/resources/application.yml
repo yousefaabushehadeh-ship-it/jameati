@@ -88,6 +88,9 @@ app:
     timeout-seconds: ${AI_TIMEOUT_SECONDS:30}
   opportunity:
     closing-soon-days: ${CLOSING_SOON_DAYS:14}
+  integration:
+    # مفتاح سري لاستقبال الفرص من أدوات خارجية (مثل Tab على واتساب). فاضي = الخاصية مقفلة.
+    api-key: ${INTEGRATION_API_KEY:}
   recommendation:
     candidate-limit: ${RECOMMENDATION_CANDIDATE_LIMIT:200}
     minimum-score: ${RECOMMENDATION_MINIMUM_SCORE:55}

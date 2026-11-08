@@ -49,9 +49,11 @@ public class OpportunityService {
         .limit(limit).map(o->publicResponse(o,viewer)).toList();
     return new PageImpl<>(content,latestPageable,latest.getTotalElements());
   }
+  public Page<OpportunityResponse> drafts(Pageable pageable){return repo.findByPublishedFalseAndDeletedFalse(pageable).map(this::response);}
   public Page<OpportunityResponse> adminList(Pageable pageable){return repo.findAll(pageable).map(this::response);}
   @Transactional public OpportunityResponse create(UpsertRequest r){if(repo.existsBySlugIgnoreCase(r.slug()))throw new IllegalArgumentException("الرابط المختصر مستخدم");return response(repo.save(mapper.toEntity(r)));}
   @Transactional public OpportunityResponse update(Long id,UpsertRequest r){var o=repo.findByIdAndDeletedFalse(id).orElseThrow(()->new NotFoundException("الفرصة غير موجودة"));preventRemovingFreeSelection(id,r.published());mapper.update(r,o);return response(o);}
+  @Transactional public OpportunityResponse publish(Long id,String category,FundingType funding){var o=repo.findByIdAndDeletedFalse(id).orElseThrow(()->new NotFoundException("الفرصة غير موجودة"));if(category!=null&&!category.isBlank())o.setCategory(category.trim().length()>100?category.trim().substring(0,100):category.trim());if(funding!=null)o.setFunding(funding);o.setPublished(true);o.setLastVerifiedAt(java.time.Instant.now());return response(o);}
   @Transactional public void delete(Long id){var o=repo.findByIdAndDeletedFalse(id).orElseThrow(()->new NotFoundException("الفرصة غير موجودة"));preventRemovingFreeSelection(id,false);o.setDeleted(true);o.setPublished(false);}
   OpportunityResponse response(Opportunity o){return response(o,false);}
   private OpportunityResponse publicResponse(Opportunity o,ContentAccessService.AccessContext viewer){return response(o,access.isOpportunityLocked(viewer,o.getId()));}

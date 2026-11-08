@@ -14,6 +14,7 @@ import Me from './pages/Me';
 import Membership from './pages/Membership';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import AdminDrafts from './pages/AdminDrafts';
 import { CATALOG } from './lib/format';
 import './styles.css';
 
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="membership" element={<Membership />} />
             <Route path="contact" element={<Contact />} />
             <Route path="me" element={<RequireAuth><Me /></RequireAuth>} />
+            <Route path="admin/drafts" element={<RequireAuth><AdminDrafts /></RequireAuth>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

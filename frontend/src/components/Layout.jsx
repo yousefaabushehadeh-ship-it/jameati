@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-do
 import { useAuth } from '../lib/auth';
 import { post } from '../lib/api';
 import Icon from './Icon';
+import { isStaff } from '../pages/AdminDrafts';
 
 const OPP_MENU = [
   ['/opportunities', 'كل الفرص'],
@@ -68,6 +69,7 @@ function Header() {
           <Link to="/opportunities" className="icon-btn" aria-label="بحث"><Icon name="search" /></Link>
           {user ? (
             <>
+              {isStaff(user) && <Link to="/admin/drafts" className="btn btn-white">المسودات</Link>}
               <Link to="/me" className="btn btn-white">مساحتي</Link>
               <button className="btn btn-sky" onClick={async () => { await logout(); nav('/'); }}>خروج</button>
             </>

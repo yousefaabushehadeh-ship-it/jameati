@@ -18,6 +18,7 @@ public interface OpportunityRepository extends JpaRepository<Opportunity,Long>,J
   @Modifying @Query("update Opportunity o set o.views=o.views+1 where o.id=:id") void incrementViews(@Param("id") Long id);
   List<Opportunity> findByIdInAndPublishedTrueAndDeletedFalse(Collection<Long> ids);
   Page<Opportunity> findByPublishedTrueAndDeletedFalse(Pageable pageable);
+  Page<Opportunity> findByPublishedFalseAndDeletedFalse(Pageable pageable);
   long countByIdInAndPublishedTrueAndDeletedFalse(Collection<Long> ids);
   List<Opportunity> findAllBySourceNameAndDeletedFalse(String sourceName);
 
