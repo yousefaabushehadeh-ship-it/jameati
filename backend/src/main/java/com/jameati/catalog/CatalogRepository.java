@@ -31,6 +31,8 @@ public interface CatalogRepository extends JpaRepository<CatalogItem,Long> {
   Optional<CatalogItem> findByTypeAndSlugAndPublishedTrueAndDeletedFalse(CatalogType type,String slug);
   Optional<CatalogItem> findByIdAndDeletedFalse(Long id);
   Optional<CatalogItem> findByTypeAndSlugIgnoreCase(CatalogType type,String slug);
+  java.util.List<CatalogItem> findAllByTypeAndWebsiteIgnoreCase(CatalogType type,String website);
+  java.util.List<CatalogItem> findByTypeInAndSlugStartingWithAndPublishedFalseAndDeletedFalse(Collection<CatalogType> types,String slugPrefix);
   @Query("select c from CatalogItem c where c.type=:type and c.deleted=false and (:q='' or lower(c.title) like lower(concat('%',:q,'%')) or lower(c.slug) like lower(concat('%',:q,'%')) or lower(c.category) like lower(concat('%',:q,'%')))")
   Page<CatalogItem> adminSearch(CatalogType type,String q,Pageable pageable);
   long countByTypeAndPublishedTrueAndDeletedFalse(CatalogType type);

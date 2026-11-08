@@ -107,6 +107,7 @@ public class SecurityConfig {
                     .requestMatchers(
                         "/api/v1/admin/opportunities/**",
                         "/api/v1/admin/catalog/**",
+                        "/api/v1/admin/intake/**",
                         "/api/v1/admin/media/**")
                     .hasAnyRole("DATA_ENTRY", "EDITOR", "ADMIN", "SUPER_ADMIN")
                     .requestMatchers("/api/v1/admin/**")

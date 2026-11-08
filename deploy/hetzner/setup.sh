@@ -80,7 +80,13 @@ fi
 say "بناء وتشغيل (أول مرة بياخد 5 لـ 10 دقايق)"
 "${COMPOSE[@]}" up -d --build
 
-# 6) استنى السيرفر يجهز
+# 6) تحديث تلقائي: كل 10 دقايق بيشيك GitHub وبينزّل أي تعديل جديد
+command -v cron >/dev/null 2>&1 || { apt-get install -y cron >/dev/null && systemctl enable --now cron; }
+CRON_LINE="*/10 * * * * root bash $REPO_DIR/deploy/hetzner/auto-update.sh >> /var/log/jameati-update.log 2>&1"
+echo "$CRON_LINE" > /etc/cron.d/jameati-update
+chmod 644 /etc/cron.d/jameati-update
+
+# 7) استنى السيرفر يجهز
 set -a; . "$ENV_FILE"; set +a
 say "استنى الباك إند يشتغل…"
 for _ in $(seq 1 90); do

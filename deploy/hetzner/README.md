@@ -39,6 +39,8 @@ bash deploy/hetzner/setup.sh
 ```
 
 ## تحديث بعد أي تعديل بالكود
+السيرفر بيشيك GitHub **كل 10 دقايق** وبينزّل أي تعديل جديد لحاله (السجل: `/var/log/jameati-update.log`).
+إذا بدك تحدّث فورًا:
 ```
 cd jameati && bash deploy/hetzner/setup.sh
 ```

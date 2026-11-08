@@ -80,7 +80,12 @@ backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
 ```
 
 - المطلوب بس `title`. الباقي اختياري.
-- `type`: scholarship / training / volunteering / fellowship / exchange / conference / job (أو بالعربي).
+- `type` بيحدد القسم:
+  - **الفرص**: scholarship / internship / training / volunteering / fellowship / exchange / conference / competition
+  - **الوظائف**: job
+  - **الدورات**: course / workshop
+  (بالعربي كمان: منحة، تدريب، تطوع، زمالة، مؤتمر، مسابقة، وظيفة، دورة، ورشة)
+- `category` اختياري: تصنيف داخل القسم (مثلاً "تقنية وبرمجة" للدورات).
 - `funding`: FULLY_FUNDED / PARTIALLY_FUNDED / SELF_FUNDED / FREE / PAID (أو "ممولة بالكامل"…).
 - `deadline` بصيغة `YYYY-MM-DD`؛ لو نص حر بينحفظ كنص.
 - التكرار: نفس الرابط، أو نفس العنوان + الجهة ⇒ `duplicate` وما بتنضاف. اللي حذفها الأدمن ما بترجع.
@@ -92,4 +97,4 @@ backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
    `BOOTSTRAP_ADMIN_ENABLED=true` و `BOOTSTRAP_ADMIN_EMAIL=...` و `BOOTSTRAP_ADMIN_PASSWORD=...` (12 حرف أو أكثر)،
    بإيميل **ما انسجّل فيه قبل**. (لو فعّلت ENABLED بدون الإيميل والباسوورد السيرفر ما بيشتغل.)
 2. سجّل دخول بالموقع بهالحساب، رح يطلعلك زر **المسودات** فوق (أو افتح `/admin/drafts`).
-3. لكل فرصة: عدّل التصنيف/التمويل إذا بدك، واضغط **نشر** أو **حذف**.
+3. لكل منشور (فرصة/وظيفة/دورة): عدّل التصنيف (والتمويل للفرص) إذا بدك، واضغط **نشر** أو **حذف**. بينعرض بقسمه بالموقع.
