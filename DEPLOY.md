@@ -2,10 +2,21 @@
 
 ```
 frontend/  → Netlify   (React/Vite)
-backend/   → Railway   (Spring Boot + MySQL)
+backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
+             (أو Railway — مدفوع وأقوى، الخطوات بالأسفل)
 ```
 
-## 1) الباك إند على Railway
+## 1-أ) الباك إند على Render + Aiven (مجاني)
+1. Aiven: أنشئ خدمة MySQL بخطة Free، وخذ Host / Port / User / Password.
+2. Render: New → Blueprint → اختار هالريبو (بيقرأ `render.yaml`).
+3. عبّي:
+   - `DB_URL` = `jdbc:mysql://HOST:PORT/defaultdb?sslMode=REQUIRED&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC`
+   - `DB_USERNAME` / `DB_PASSWORD` من Aiven
+4. بعد النشر رح يعطيك رابط زي `https://jameati-api.onrender.com`.
+
+ملاحظة: الخطة المجانية بتنام بعد ~15 دقيقة بدون زيارات، وأول طلب بعدها بياخذ حوالي دقيقة.
+
+## 1-ب) بديل: الباك إند على Railway
 1. New Project → Deploy from GitHub repo → اختار هالريبو.
 2. من إعدادات الخدمة: **Root Directory = `backend`** (رح يبني من `Dockerfile` تلقائيًا).
 3. داخل نفس المشروع: **+ New → Database → MySQL**.

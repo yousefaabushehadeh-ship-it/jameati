@@ -1,0 +1,30 @@
+# Render Blueprint — الباك إند (خطة مجانية)
+services:
+  - type: web
+    name: jameati-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DB_URL
+        sync: false   # jdbc:mysql://HOST:PORT/defaultdb?sslMode=REQUIRED&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ANALYTICS_HASH_SECRET
+        generateValue: true
+      - key: AUTH_COOKIE_SECURE
+        value: "true"
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://jameati-platform.netlify.app
+      - key: MAIL_FRONTEND_URL
+        value: https://jameati-platform.netlify.app
+      - key: MPGS_FRONTEND_RETURN_URL
+        value: https://jameati-platform.netlify.app
+      - key: JAVA_TOOL_OPTIONS
+        value: "-Xmx360m -Xss512k -XX:MaxMetaspaceSize=150m -XX:+UseSerialGC -XX:TieredStopAtLevel=1"
