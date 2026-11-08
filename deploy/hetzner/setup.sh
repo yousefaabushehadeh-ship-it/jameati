@@ -100,6 +100,6 @@ echo "🔑 مفتاح Tab (X-API-Key):  $INTEGRATION_API_KEY"
 echo "📮 رابط استقبال الفرص:     https://$SITE_DOMAIN/api/v1/integrations/opportunities"
 if [ "$FIRST_RUN" = true ] && [ "${BOOTSTRAP_ADMIN_ENABLED}" = true ]; then
   echo "👤 حساب الأدمن:  $BOOTSTRAP_ADMIN_EMAIL"
-  echo "   الباسوورد:    $BOOTSTRAP_ADMIN_PASSWORD   (احفظه وغيّره بعد أول دخول)"
+  echo "   الباسوورد:    $BOOTSTRAP_ADMIN_PASSWORD   (احفظه بمكان آمن)"
 fi
 echo "(كل الأسرار محفوظة بـ deploy/hetzner/.env على السيرفر)"
