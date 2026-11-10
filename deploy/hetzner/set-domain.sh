@@ -23,6 +23,11 @@ echo "SITE_DOMAIN=$DOMAIN" >> "$ENV_FILE"
 [ -n "$WWW" ] && echo "WWW_DOMAIN=$WWW" >> "$ENV_FILE"
 
 docker compose -f deploy/hetzner/docker-compose.yml --env-file "$ENV_FILE" up -d --build
+
+# تحديث تلقائي من GitHub كل 10 دقايق (عشان ما تحتاج تدخل السيرفر مرة ثانية)
+command -v cron >/dev/null 2>&1 || { apt-get install -y cron >/dev/null && systemctl enable --now cron; }
+echo "*/10 * * * * root bash $(pwd)/deploy/hetzner/auto-update.sh >> /var/log/jameati-update.log 2>&1" > /etc/cron.d/jameati-update
+chmod 644 /etc/cron.d/jameati-update
 echo
 echo "تم. الموقع رح يشتغل على https://$DOMAIN"
 echo "(شهادة HTTPS بتطلع لحالها خلال دقيقة أو دقيقتين بعد ما يوصل الـ DNS. إذا لسا مش واصل، Caddy بيضل يحاول.)"
