@@ -11,14 +11,16 @@ ENV_FILE=deploy/hetzner/.env
 
 IP="$(curl -fsS4 https://ifconfig.me || true)"
 echo "IP السيرفر: $IP"
-for host in "$DOMAIN" "www.$DOMAIN"; do
+# www بس للدومين الأساسي (example.com)، مش للفرعي (new.example.com)
+WWW=""; [ "$(echo "$DOMAIN" | tr -cd '.' | wc -c)" -eq 1 ] && WWW="www.$DOMAIN"
+for host in "$DOMAIN" $WWW; do
   got="$(getent ahostsv4 "$host" | awk 'NR==1{print $1}')"
   if [ "$got" = "$IP" ]; then echo "✅ $host ← $got"; else echo "⚠️  $host ← ${got:-ما في سجل} (لازم يكون $IP)"; fi
 done
 
 sed -i '/^SITE_DOMAIN=/d;/^WWW_DOMAIN=/d' "$ENV_FILE"
 echo "SITE_DOMAIN=$DOMAIN" >> "$ENV_FILE"
-echo "WWW_DOMAIN=www.$DOMAIN" >> "$ENV_FILE"
+[ -n "$WWW" ] && echo "WWW_DOMAIN=$WWW" >> "$ENV_FILE"
 
 docker compose -f deploy/hetzner/docker-compose.yml --env-file "$ENV_FILE" up -d --build
 echo
