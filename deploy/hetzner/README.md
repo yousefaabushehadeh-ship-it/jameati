@@ -31,12 +31,15 @@ cd jameati && bash deploy/hetzner/setup.sh
 - إيميل وباسوورد الأدمن
 
 ## دومين خاص (اختياري)
-اعمل سجل **A** بالدومين يأشّر على IP السيرفر، وبعدين على السيرفر:
+1. بلوحة الدومين (مثلاً Namecheap ← Domain List ← Manage ← **Advanced DNS**):
+   - احذف أي سجل قديم لـ `@` و `www` (CNAME أو URL Redirect تبع الـ parking)
+   - ضيف **A Record**: Host `@` ← Value `IP السيرفر`
+   - ضيف **A Record**: Host `www` ← Value `IP السيرفر`
+2. استنى 5 لـ 30 دقيقة، وبعدين على السيرفر:
 ```
-cd jameati
-sed -i 's/^SITE_DOMAIN=.*/SITE_DOMAIN=app.example.com/' deploy/hetzner/.env
-bash deploy/hetzner/setup.sh
+cd ~/jameati && git pull && bash deploy/hetzner/set-domain.sh example.com
 ```
+السكربت بيتأكد من الـ DNS، بيغيّر الإعدادات (الكوكيز، CORS، روابط الإيميل)، وبيطلع شهادة HTTPS لحاله. `www` بتحوّل للدومين الأساسي.
 
 ## تحديث بعد أي تعديل بالكود
 السيرفر بيشيك GitHub **كل 10 دقايق** وبينزّل أي تعديل جديد لحاله (السجل: `/var/log/jameati-update.log`).

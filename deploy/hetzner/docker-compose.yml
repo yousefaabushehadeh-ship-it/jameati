@@ -53,6 +53,7 @@ services:
     depends_on: [api]
     environment:
       SITE_DOMAIN: ${SITE_DOMAIN}
+      WWW_DOMAIN: ${WWW_DOMAIN:-}
     ports:
       - "80:80"
       - "443:443"

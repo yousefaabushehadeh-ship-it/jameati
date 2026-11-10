@@ -18,3 +18,8 @@
 
 	header /assets/* Cache-Control "public, max-age=31536000, immutable"
 }
+
+# www.الدومين ← تحويل للدومين الأساسي (بس إذا WWW_DOMAIN محدد بـ .env)
+{$WWW_DOMAIN:http://www.invalid} {
+	redir https://{$SITE_DOMAIN}{uri} permanent
+}
