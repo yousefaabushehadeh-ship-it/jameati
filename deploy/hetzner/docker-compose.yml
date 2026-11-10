@@ -53,7 +53,7 @@ services:
     depends_on: [api]
     environment:
       SITE_DOMAIN: ${SITE_DOMAIN}
-      WWW_DOMAIN: ${WWW_DOMAIN:-}
+      WWW_DOMAIN: ${WWW_DOMAIN:-http://www.invalid}
     ports:
       - "80:80"
       - "443:443"

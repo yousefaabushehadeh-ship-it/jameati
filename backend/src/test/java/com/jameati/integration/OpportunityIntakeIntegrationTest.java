@@ -114,5 +114,13 @@ class OpportunityIntakeIntegrationTest {
             .contentType(MediaType.APPLICATION_JSON).content("{\"funding\":\"FREE\"}"))
         .andExpect(status().isOk());
     assertThat(repository.findById(opp.getId()).orElseThrow().isPublished()).isTrue();
+
+    // السجل بيحفظ كل منشور، حتى المكرر، مع حالته هلأ
+    mockMvc.perform(get("/api/v1/admin/intake/log"))
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.data.rows[0].status").value("duplicate"))
+        .andExpect(jsonPath("$.data.rows[?(@.title=='مطور ويب مبتدئ' && @.status=='created')].state").value(org.hamcrest.Matchers.hasItem("PUBLISHED")))
+        .andExpect(jsonPath("$.data.rows[?(@.title=='دورة بايثون')].state").value(org.hamcrest.Matchers.hasItem("DRAFT")))
+        .andExpect(jsonPath("$.data.rows[0].receivedAt").exists());
   }
 }

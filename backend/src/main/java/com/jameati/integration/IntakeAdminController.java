@@ -22,27 +22,51 @@ import org.springframework.web.bind.annotation.*;
 
 /** صفحة "المسودات": كل اللي وصل من Tab (فرص + وظائف + دورات) بمكان واحد. */
 @RestController
-@RequestMapping("/api/v1/admin/intake/drafts")
+@RequestMapping("/api/v1/admin/intake")
 @PreAuthorize("hasAnyRole('EDITOR','ADMIN','SUPER_ADMIN')")
 public class IntakeAdminController {
   private final OpportunityRepository opportunities;
   private final OpportunityService opportunityService;
   private final CatalogRepository catalog;
   private final CatalogAdminService catalogAdmin;
+  private final IntakeLogRepository log;
 
   public IntakeAdminController(OpportunityRepository opportunities, OpportunityService opportunityService,
-                               CatalogRepository catalog, CatalogAdminService catalogAdmin) {
+                               CatalogRepository catalog, CatalogAdminService catalogAdmin, IntakeLogRepository log) {
     this.opportunities = opportunities;
     this.opportunityService = opportunityService;
     this.catalog = catalog;
     this.catalogAdmin = catalogAdmin;
+    this.log = log;
+  }
+
+  /** حالة العنصر هلأ: DRAFT / PUBLISHED / DELETED (أو null إذا ما انحفظ) */
+  public record LogRow(Long id, Instant receivedAt, String title, Kind kind, String status, String reason,
+                       Long itemId, String itemSlug, String state) {}
+  public record LogPage(List<LogRow> rows, int page, int totalPages, long total) {}
+
+  @GetMapping("/log")
+  @Transactional(readOnly = true)
+  public ApiResponse<LogPage> log(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "50") int size) {
+    var p = log.findAllByOrderByCreatedAtDescIdDesc(PageRequest.of(Math.max(page, 0), Math.min(Math.max(size, 1), 100)));
+    var rows = p.getContent().stream().map(l -> new LogRow(l.getId(), l.getCreatedAt(), l.getTitle(), l.getKind(),
+        l.getStatus(), l.getReason(), l.getItemId(), l.getItemSlug(), state(l))).toList();
+    return ApiResponse.ok(new LogPage(rows, p.getNumber(), p.getTotalPages(), p.getTotalElements()));
+  }
+
+  private String state(IntakeLog l) {
+    if (l.getItemId() == null || l.getKind() == null) return null;
+    if (l.getKind() == Kind.OPPORTUNITY) {
+      return opportunities.findById(l.getItemId()).map(o -> o.isDeleted() ? "DELETED" : o.isPublished() ? "PUBLISHED" : "DRAFT").orElse("DELETED");
+    }
+    return catalog.findById(l.getItemId()).map(c -> c.isDeleted() ? "DELETED" : c.isPublished() ? "PUBLISHED" : "DRAFT").orElse("DELETED");
   }
 
   public record Draft(Kind kind, Long id, String title, String organization, String category, FundingType funding,
                       String deadline, String link, String description, String sourceName, Instant createdAt) {}
   public record PublishRequest(String category, FundingType funding) {}
 
-  @GetMapping
+  @GetMapping("/drafts")
   @Transactional(readOnly = true)
   public ApiResponse<List<Draft>> list() {
     var drafts = new ArrayList<Draft>();
@@ -55,7 +79,7 @@ public class IntakeAdminController {
     return ApiResponse.ok(drafts);
   }
 
-  @PostMapping("/{kind}/{id}/publish")
+  @PostMapping("/drafts/{kind}/{id}/publish")
   @Transactional
   public ApiResponse<Void> publish(@PathVariable Kind kind, @PathVariable Long id, @RequestBody(required = false) PublishRequest r) {
     var category = r == null ? null : r.category();
@@ -69,7 +93,7 @@ public class IntakeAdminController {
     return ApiResponse.ok(null);
   }
 
-  @DeleteMapping("/{kind}/{id}")
+  @DeleteMapping("/drafts/{kind}/{id}")
   @PreAuthorize("hasAnyRole('ADMIN','SUPER_ADMIN')")
   public ResponseEntity<Void> delete(@PathVariable Kind kind, @PathVariable Long id) {
     if (kind == Kind.OPPORTUNITY) opportunityService.delete(id);

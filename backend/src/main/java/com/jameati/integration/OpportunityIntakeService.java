@@ -55,13 +55,17 @@ public class OpportunityIntakeService {
 
   private final OpportunityRepository opportunities;
   private final CatalogRepository catalog;
+  private final IntakeLogRepository log;
 
-  public OpportunityIntakeService(OpportunityRepository opportunities, CatalogRepository catalog) {
+  public OpportunityIntakeService(OpportunityRepository opportunities, CatalogRepository catalog, IntakeLogRepository log) {
     this.opportunities = opportunities;
     this.catalog = catalog;
+    this.log = log;
   }
 
-  public record ItemResult(String status, String section, Long id, String slug, String title, String reason) {}
+  public record ItemResult(String status, String section, Long id, String slug, String title, String reason) {
+    Kind kind() { return section == null ? null : switch (section) { case "jobs" -> Kind.JOB; case "courses" -> Kind.COURSE; default -> Kind.OPPORTUNITY; }; }
+  }
   public record IntakeResult(int created, int duplicates, int rejected, List<ItemResult> results, String message) {}
 
   /** الحقول المشتركة بعد التنظيف */
@@ -82,6 +86,14 @@ public class OpportunityIntakeService {
     for (var item : items) {
       var r = intakeOne(item);
       results.add(r);
+      var entry = new IntakeLog();
+      entry.setTitle(r.title() != null ? r.title() : clip(text(item, "title", "name"), 300));
+      entry.setKind(r.kind());
+      entry.setStatus(r.status());
+      entry.setReason(clip(r.reason(), 255));
+      entry.setItemId(r.id());
+      entry.setItemSlug(r.slug());
+      log.save(entry);
       switch (r.status()) {
         case "created" -> created++;
         case "duplicate" -> duplicates++;
