@@ -18,14 +18,20 @@ export function Badge({ tone = 'gray', children }) {
   return <span className={`badge badge-${tone}`}>{children}</span>;
 }
 
+// لوجو جامعتي فوق صور المنح
+export const BrandMark = ({ className = '' }) => (
+  <span className={`brand-mark ${className}`} aria-hidden="true"><img src="/logo.png" alt="" /></span>
+);
+
 // صورة الكرت: صورة حقيقية لو موجودة، وإلا خلفية متدرجة بأيقونة القسم
-function Media({ image, icon, locked, chip, extra }) {
+function Media({ image, icon, locked, chip, extra, brand }) {
   return (
     <div className={`media ${locked ? 'media-locked' : ''}`}>
       {image ? <img src={image} alt="" loading="lazy" /> : <div className="media-ph"><Icon name={icon} size={56} stroke={1.4} /></div>}
       {chip && <span className="media-chip">{chip}</span>}
       <span className="media-icon"><Icon name={icon} size={22} /></span>
       {locked && <span className="media-lock"><Icon name="lock" size={13} /> للأعضاء</span>}
+      {brand && <BrandMark />}
       {extra}
     </div>
   );
@@ -49,7 +55,7 @@ export function OpportunityCard({ o }) {
   return (
     <article className="card item-card">
       <Link to={to} className="stretched" aria-label={o.title} />
-      <Media image={o.coverImage} icon="cap" locked={o.accessLocked} chip={o.category}
+      <Media image={o.coverImage} icon="cap" locked={o.accessLocked} chip={o.category} brand
         extra={!o.accessLocked && <span className={`media-status st-${st.tone}`}>{st.label}</span>} />
       <div className="card-body">
         <h3 className="card-title">{o.title}</h3>
@@ -110,9 +116,10 @@ export function SectionHead({ icon, eyebrow, title, sub, more, moreTo }) {
   );
 }
 
-export function PageHero({ count, title, sub, placeholder, defaultValue, onSearch, dark }) {
+export function PageHero({ count, title, sub, placeholder, defaultValue, onSearch, dark, art }) {
   return (
-    <section className={`page-hero ${dark ? 'page-hero-dark' : ''}`}>
+    <section className={`page-hero ${dark ? 'page-hero-dark' : ''} ${art ? 'has-art' : ''}`}>
+      {art && <img className="hero-art" src={art} alt="" aria-hidden="true" />}
       <div className="container">
         {count && <span className="hero-count">{count}</span>}
         <h1>{title}</h1>

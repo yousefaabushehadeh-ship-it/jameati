@@ -31,6 +31,7 @@ export default function Opportunities() {
         placeholder="ابحث عن منحة، تدريب، دولة..."
         defaultValue={f.q || ''}
         onSearch={(v) => set('q', v)}
+        art="/students.svg"
       />
       <div className="container section">
         <Chips options={categories} value={f.category || ''} onChange={(v) => set('category', v)} />

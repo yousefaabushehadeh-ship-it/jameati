@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { get, post, del } from '../lib/api';
 import { useFetch } from '../lib/useFetch';
 import { useAuth } from '../lib/auth';
-import { Badge, ErrorBox, Loading, LockedNotice } from '../components/ui';
+import { Badge, BrandMark, ErrorBox, Loading, LockedNotice } from '../components/ui';
 import { FUNDING, STATUS, date, deadlineText } from '../lib/format';
 import AiChat from '../components/AiChat';
 
@@ -40,7 +40,7 @@ export default function OpportunityDetail() {
   return (
     <div className="container section detail">
       <Link to="/opportunities" className="back-link">→ رجوع للفرص</Link>
-      {o.coverImage && <img className="detail-cover" src={o.coverImage} alt="" />}
+      {o.coverImage && <div className="detail-cover-wrap"><img className="detail-cover" src={o.coverImage} alt="" /><BrandMark className="brand-mark-lg" /></div>}
       <div className="row-wrap">
         {o.category && <Badge tone="sky">{o.category}</Badge>}
         <Badge tone={st.tone}>{st.label}</Badge>
