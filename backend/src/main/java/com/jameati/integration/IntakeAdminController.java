@@ -63,8 +63,9 @@ public class IntakeAdminController {
   }
 
   public record Draft(Kind kind, Long id, String title, String organization, String category, FundingType funding,
-                      String deadline, String link, String description, String sourceName, Instant createdAt) {}
-  public record PublishRequest(String category, FundingType funding) {}
+                      String deadline, String link, String description, String sourceName, Instant createdAt,
+                      String requiredDocuments, String requirements) {}
+  public record PublishRequest(String category, FundingType funding, String requiredDocuments, String requirements) {}
 
   @GetMapping("/drafts")
   @Transactional(readOnly = true)
@@ -85,6 +86,7 @@ public class IntakeAdminController {
     var category = r == null ? null : r.category();
     if (kind == Kind.OPPORTUNITY) {
       opportunityService.publish(id, category, r == null ? null : r.funding());
+      if (r != null) opportunityService.setRoadmap(id, r.requiredDocuments(), r.requirements());
     } else {
       var c = catalogItem(kind, id);
       if (category != null && !category.isBlank()) c.setCategory(category.trim().length() > 100 ? category.trim().substring(0, 100) : category.trim());
@@ -117,7 +119,8 @@ public class IntakeAdminController {
   private static Draft view(Opportunity o) {
     var deadline = o.getDeadline() != null ? o.getDeadline().toString() : o.getDeadlineText();
     return new Draft(Kind.OPPORTUNITY, o.getId(), o.getTitle(), o.getOrganization(), o.getCategory(), o.getFunding(),
-        deadline, o.getOfficialUrl(), o.getDescription(), o.getSourceName(), o.getCreatedAt());
+        deadline, o.getOfficialUrl(), o.getDescription(), o.getSourceName(), o.getCreatedAt(),
+        o.getRequiredDocuments(), o.getRequirements());
   }
 
   private static Draft view(CatalogItem c) {
@@ -126,6 +129,6 @@ public class IntakeAdminController {
     var deadline = attrs.get("آخر موعد") == null ? null : String.valueOf(attrs.get("آخر موعد"));
     var source = attrs.get("source") == null ? null : String.valueOf(attrs.get("source"));
     return new Draft(kind, c.getId(), c.getTitle(), c.getOrganization(), c.getCategory(), null,
-        deadline, c.getWebsite(), c.getContent(), source, c.getCreatedAt());
+        deadline, c.getWebsite(), c.getContent(), source, c.getCreatedAt(), null, null);
   }
 }

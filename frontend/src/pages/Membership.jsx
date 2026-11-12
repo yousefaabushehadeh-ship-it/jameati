@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { api, get } from '../lib/api';
 import { useFetch } from '../lib/useFetch';
 import { useAuth } from '../lib/auth';
@@ -8,16 +8,17 @@ import { ErrorBox, Field, Loading } from '../components/ui';
 import { date, num } from '../lib/format';
 
 const PLAN_INFO = {
-  ANNUAL: { title: 'الباقة السنوية', sub: 'سنة كاملة', perks: ['كامل محتوى المنصة والدورات والأدلة', 'التفاصيل وروابط التقديم والمصادر الرسمية', 'تنبيهات المواعيد النهائية'] },
+  ANNUAL: { title: 'الباقة السنوية', sub: 'سنة كاملة', perks: ['كامل الدورات والأدلة والمقالات', 'تفاصيل الجامعات والتخصصات', 'تنبيهات المواعيد النهائية'] },
   QUARTERLY: { title: 'باقة 3 شهور', sub: '3 شهور', perks: ['وصول كامل للمحتوى لمدة 3 شهور'] },
-  CONSULTATION: { title: 'باقة الاستشارة', sub: 'متابعة شخصية', perks: ['تحديد المسار ودعم التقديم', 'متابعة حتى الحصول على المنحة أو الوظيفة', 'جلسات استشارية مع فريق جامعتي'] },
+  CONSULTATION: { title: 'باقة الاستشارة', sub: 'متابعة شخصية', perks: ['جلسات استشارية مع فريق جامعتي', 'مراجعة الشهادات والأوراق والتقديم معك', 'متابعة حتى الحصول على المنحة أو الوظيفة'] },
 };
 const CUR = { JOD: 'د.أ', USD: '$' };
 
 export default function Membership() {
   const { user } = useAuth();
   const plan = useFetch(() => get('/public/membership-plan'), [user?.id]);
-  const [selected, setSelected] = useState('ANNUAL');
+  const [params] = useSearchParams();
+  const [selected, setSelected] = useState(params.get('plan') || 'ANNUAL');
 
   if (plan.loading) return <Loading />;
   if (plan.error) return <div className="container section"><ErrorBox error={plan.error} onRetry={plan.reload} /></div>;
@@ -30,8 +31,8 @@ export default function Membership() {
       <section className="plans-hero">
         <div className="container">
           <span className="pill-ghost pill-gold"><Icon name="crown" size={15} /> عضوية جامعتي+</span>
-          <h1>افتح كل الفرص والأدلة بعضوية واحدة</h1>
-          <p>بدون عضوية بتقدر تشوف {num(p.freeLimit)} اختيارات مجانية من كل قسم. العضوية بتفتحلك التفاصيل والمصادر وروابط التقديم.</p>
+          <h1>المنح مجانية، وإحنا معك بالتقديم</h1>
+          <p>كل المنح وتفاصيلها وروابط تقديمها مجانية للكل. باقة الاستشارة بتجيبلك فريق جامعتي يقدّم معك خطوة بخطوة، والباقة السنوية بتفتحلك الدورات والأدلة.</p>
           {p.active && <div className="alert alert-ok">عضويتك فعّالة لغاية {date(p.expiresAt)} 🎉</div>}
           <span className="step-label">الخطوة الأولى</span>
           <div className="plans">

@@ -127,12 +127,15 @@ public class OpportunityIntakeService {
         clip(text(n, "image", "coverImage"), 500),
         text(n, "funding", "price"));
 
-    return route.kind() == Kind.OPPORTUNITY ? saveOpportunity(post) : saveCatalog(post, route.kind());
+    if (route.kind() != Kind.OPPORTUNITY) return saveCatalog(post, route.kind());
+    return saveOpportunity(post,
+        lines(n, "documents", "requiredDocuments", "certificates"),
+        lines(n, "requirements", "eligibility", "conditions"));
   }
 
   // ---------- الفرص ----------
 
-  private ItemResult saveOpportunity(Post p) {
+  private ItemResult saveOpportunity(Post p, String documents, String requirements) {
     var key = fingerprint(p.title(), p.organization());
     Optional<Opportunity> existing = Optional.empty();
     if (p.link() != null) {
@@ -161,6 +164,8 @@ public class OpportunityIntakeService {
     o.setCoverImage(p.image());
     o.setOfficialUrl(p.link());
     o.setApplyUrl(p.link());
+    o.setRequiredDocuments(documents);
+    o.setRequirements(requirements);
     o.setPublished(false);
     o.setSourceName(SOURCE);
     o.setSourceExternalKey(key);
@@ -268,6 +273,19 @@ public class OpportunityIntakeService {
     for (var name : names) {
       var v = n.get(name);
       if (v != null && !v.isNull() && !v.asText().isBlank()) return v.asText().trim();
+    }
+    return null;
+  }
+
+  // بيقبل مصفوفة أو نص (سطر لكل عنصر) وبرجعهم نص سطر لكل عنصر
+  private static String lines(JsonNode n, String... names) {
+    for (var name : names) {
+      var v = n.get(name);
+      if (v == null || v.isNull()) continue;
+      var out = new ArrayList<String>();
+      if (v.isArray()) v.forEach(x -> { if (!x.asText().isBlank()) out.add(x.asText().trim()); });
+      else for (var l : v.asText().split("\\r?\\n")) if (!l.isBlank()) out.add(l.replaceFirst("^[\\s\\-•*·]+", "").trim());
+      if (!out.isEmpty()) return String.join("\n", out);
     }
     return null;
   }

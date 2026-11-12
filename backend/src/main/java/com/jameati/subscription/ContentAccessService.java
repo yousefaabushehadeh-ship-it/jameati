@@ -45,8 +45,9 @@ public class ContentAccessService {
     return resolve(user, plans.current());
   }
 
+  /** المنح والفرص مجانية للكل؛ المدفوع هو الاستشارة وخدمة التقديم. */
   public boolean isOpportunityLocked(AccessContext access, Long opportunityId) {
-    return isLocked(access, SubscriptionPlanService.OPPORTUNITY, opportunityId);
+    return false;
   }
 
   public boolean isCatalogLocked(AccessContext access, CatalogType type, Long itemId) {

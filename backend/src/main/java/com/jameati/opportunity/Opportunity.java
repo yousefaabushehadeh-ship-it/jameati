@@ -30,6 +30,10 @@ public class Opportunity extends BaseEntity {
   @Column(length=500) private String coverImage;
   @Column(length=500) private String officialUrl;
   @Column(length=500) private String applyUrl;
+  /** الشهادات والأوراق المطلوبة، كل وحدة بسطر */
+  @Column(columnDefinition="text") private String requiredDocuments;
+  /** شروط ومتطلبات الأهلية، كل شرط بسطر */
+  @Column(columnDefinition="text") private String requirements;
   @Column(nullable=false) private boolean serviceEnabled;
   @Column(precision=10,scale=2) private BigDecimal servicePrice;
   @Column(nullable=false,length=10) private String serviceCurrency="USD";

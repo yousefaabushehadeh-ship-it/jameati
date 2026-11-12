@@ -75,7 +75,9 @@ backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
   "funding": "FULLY_FUNDED",
   "country": "ألمانيا",
   "description": "نص المنشور أو ملخصه",
-  "source": "اسم جروب الواتساب"
+  "source": "اسم جروب الواتساب",
+  "documents": ["جواز سفر", "كشف علامات مصدّق", "IELTS 6.5"],
+  "requirements": ["معدل 80% فأعلى", "خريج بكالوريوس"]
 }
 ```
 
@@ -88,6 +90,7 @@ backend/   → Render (مجاني) + MySQL على Aiven (مجاني)
 - `category` اختياري: تصنيف داخل القسم (مثلاً "تقنية وبرمجة" للدورات).
 - `funding`: FULLY_FUNDED / PARTIALLY_FUNDED / SELF_FUNDED / FREE / PAID (أو "ممولة بالكامل"…).
 - `deadline` بصيغة `YYYY-MM-DD`؛ لو نص حر بينحفظ كنص.
+- `documents` (الشهادات والأوراق) و `requirements` (الشروط): مصفوفة أو نص سطر لكل عنصر. بيطلعوا بـ"خريطة المنحة" بصفحة المنحة، وبتقدر تعدلهم بصفحة المسودات قبل النشر.
 - التكرار: نفس الرابط، أو نفس العنوان + الجهة ⇒ `duplicate` وما بتنضاف. اللي حذفها الأدمن ما بترجع.
 
 الرد: `{ "data": { "created": 1, "duplicates": 0, "rejected": 0, "results": [ { "status": "created", "id": 12, ... } ] } }`
