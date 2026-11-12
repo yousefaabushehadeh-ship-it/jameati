@@ -4,7 +4,7 @@ import { get, post, del } from '../lib/api';
 import { useFetch } from '../lib/useFetch';
 import { useAuth } from '../lib/auth';
 import { Badge, BrandMark, ErrorBox, Loading, LockedNotice } from '../components/ui';
-import { FUNDING, STATUS, date, deadlineText } from '../lib/format';
+import { FUNDING, STATUS, date, deadlineText, isClosed } from '../lib/format';
 import AiChat from '../components/AiChat';
 
 export default function OpportunityDetail() {
@@ -65,7 +65,9 @@ export default function OpportunityDetail() {
             {o.nationalities?.length > 0 && (<><dt>الجنسيات</dt><dd>{o.nationalities.join('، ')}</dd></>)}
             {o.lastVerifiedAt && (<><dt>آخر تحقق</dt><dd>{date(o.lastVerifiedAt)}</dd></>)}
           </dl>
-          {(o.applyUrl || o.officialUrl) && (
+          {isClosed(o) ? (
+            <div className="alert alert-closed">التقديم على هالمنحة مغلق، انتهى آخر موعد.</div>
+          ) : (o.applyUrl || o.officialUrl) && (
             <a className="btn btn-primary btn-block" href={o.applyUrl || o.officialUrl} target="_blank" rel="noreferrer">التقديم من الموقع الرسمي ↗</a>
           )}
           {user ? (
