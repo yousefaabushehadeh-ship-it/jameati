@@ -83,7 +83,7 @@ export default function OpportunityDetail() {
           {msg && <p className="muted small">{msg}</p>}
           {!isClosed(o) && (
             <div className="service-box">
-              <strong>بدك نقدّم عنك؟</strong>
+              <strong>بدك تقدّم؟</strong>
               <p className="muted small">استشارة مع فريق جامعتي، مراجعة أوراقك، والتقديم معك لحد ما يوصل طلبك.</p>
               <Link className="btn btn-navy btn-block" to="/membership?plan=CONSULTATION">الاستشارة والتقديم (مدفوعة)</Link>
             </div>
