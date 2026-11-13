@@ -144,6 +144,6 @@ class OpportunityServiceTest {
         true, true, "cover.jpg", "https://official.example", "https://apply.example", true,
         BigDecimal.TEN, "USD", "المصدر", "https://source.example", now, 30, 8,
         Set.of("هندسة"), Set.of("ALL"), Set.of("BACHELOR"), OpportunityStatus.ALWAYS_OPEN,
-        0, now, now, false);
+        0, now, now, false, null, null);
   }
 }

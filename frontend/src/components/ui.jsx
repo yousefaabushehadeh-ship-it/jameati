@@ -1,6 +1,6 @@
 import { Link, Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../lib/auth';
-import { FUNDING, STATUS, deadlineText, CATALOG, num } from '../lib/format';
+import { FUNDING, STATUS, deadlineText, isClosed, CATALOG, num } from '../lib/format';
 import Icon from './Icon';
 
 export const Loading = () => <div className="loading"><span className="spinner" /> جاري التحميل…</div>;
@@ -53,7 +53,7 @@ export function OpportunityCard({ o }) {
   const st = STATUS[o.status] || STATUS.UNKNOWN;
   const to = `/opportunities/${o.slug}`;
   return (
-    <article className="card item-card">
+    <article className={`card item-card ${isClosed(o) ? 'item-closed' : ''}`}>
       <Link to={to} className="stretched" aria-label={o.title} />
       <Media image={o.coverImage} icon="cap" locked={o.accessLocked} chip={o.category} brand
         extra={!o.accessLocked && <span className={`media-status st-${st.tone}`}>{st.label}</span>} />

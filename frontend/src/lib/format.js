@@ -10,7 +10,7 @@ export const STATUS = {
   OPEN: { label: 'مفتوحة', tone: 'green' },
   UPCOMING: { label: 'قريبًا', tone: 'blue' },
   CLOSING_SOON: { label: 'تغلق قريبًا', tone: 'orange' },
-  EXPIRED: { label: 'منتهية', tone: 'gray' },
+  EXPIRED: { label: 'مغلقة', tone: 'red' },
   ALWAYS_OPEN: { label: 'مفتوحة دائمًا', tone: 'green' },
   UNKNOWN: { label: 'غير محدد', tone: 'gray' },
 };
@@ -73,8 +73,11 @@ export function date(d) {
   }
 }
 
+export const isClosed = (o) => o?.status === 'EXPIRED';
+
 export function deadlineText(o) {
   if (o.alwaysOpen) return 'مفتوحة دائمًا';
+  if (isClosed(o)) return `انتهى التقديم${o.deadline ? ` (${date(o.deadline)})` : ''}`;
   if (o.deadline) return date(o.deadline);
   return o.deadlineText || 'غير محدد';
 }

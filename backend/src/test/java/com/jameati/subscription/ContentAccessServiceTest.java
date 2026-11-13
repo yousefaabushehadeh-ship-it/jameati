@@ -38,7 +38,7 @@ class ContentAccessServiceTest {
     var access = service.resolve((Principal) null);
 
     assertThat(service.isOpportunityLocked(access, 10L)).isFalse();
-    assertThat(service.isOpportunityLocked(access, 99L)).isTrue();
+    assertThat(service.isOpportunityLocked(access, 99L)).isFalse(); // المنح صارت مجانية للكل
     assertThat(service.isCatalogLocked(access, CatalogType.COURSE, 20L)).isFalse();
     assertThat(service.isCatalogLocked(access, CatalogType.COURSE, 21L)).isTrue();
   }

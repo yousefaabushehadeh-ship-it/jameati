@@ -135,6 +135,8 @@ function DraftRow({ d, onDone }) {
   const kind = KINDS[d.kind] || KINDS.OPPORTUNITY;
   const [category, setCategory] = useState(d.category);
   const [funding, setFunding] = useState(d.funding || 'PARTIALLY_FUNDED');
+  const [docs, setDocs] = useState(d.requiredDocuments || '');
+  const [reqs, setReqs] = useState(d.requirements || '');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const categories = kind.categories.includes(d.category) ? kind.categories : [d.category, ...kind.categories];
@@ -152,7 +154,7 @@ function DraftRow({ d, onDone }) {
   };
 
   const publish = () =>
-    act(() => post(`/admin/intake/drafts/${d.kind}/${d.id}/publish`, d.kind === 'OPPORTUNITY' ? { category, funding } : { category }));
+    act(() => post(`/admin/intake/drafts/${d.kind}/${d.id}/publish`, d.kind === 'OPPORTUNITY' ? { category, funding, requiredDocuments: docs, requirements: reqs } : { category }));
   const remove = () => window.confirm('متأكد بدك تحذفها؟') && act(() => del(`/admin/intake/drafts/${d.kind}/${d.id}`));
 
   return (
@@ -171,6 +173,16 @@ function DraftRow({ d, onDone }) {
         </div>
         <p className="draft-text">{d.description}</p>
         {d.link && <a href={d.link} target="_blank" rel="noreferrer" className="draft-link">{d.link}</a>}
+        {d.kind === 'OPPORTUNITY' && (
+          <div className="draft-roadmap">
+            <label>الشهادات والأوراق المطلوبة (كل وحدة بسطر)
+              <textarea rows={3} value={docs} onChange={(e) => setDocs(e.target.value)} placeholder={'جواز سفر\nكشف علامات\nIELTS 6.5'} />
+            </label>
+            <label>الشروط والمتطلبات (كل شرط بسطر)
+              <textarea rows={3} value={reqs} onChange={(e) => setReqs(e.target.value)} placeholder={'معدل 80% فأعلى\nعمر أقل من 30'} />
+            </label>
+          </div>
+        )}
         <div className="draft-actions">
           <select value={category} onChange={(e) => setCategory(e.target.value)} aria-label="التصنيف">
             {categories.map((c) => <option key={c}>{c}</option>)}

@@ -4,8 +4,9 @@ import { get, post, del } from '../lib/api';
 import { useFetch } from '../lib/useFetch';
 import { useAuth } from '../lib/auth';
 import { Badge, BrandMark, ErrorBox, Loading, LockedNotice } from '../components/ui';
-import { FUNDING, STATUS, date, deadlineText } from '../lib/format';
+import { FUNDING, STATUS, date, deadlineText, isClosed } from '../lib/format';
 import AiChat from '../components/AiChat';
+import Roadmap from '../components/Roadmap';
 
 export default function OpportunityDetail() {
   const { slug } = useParams();
@@ -54,6 +55,7 @@ export default function OpportunityDetail() {
           {o.accessLocked ? <LockedNotice /> : (
             <div className="prose">{(o.description || '').split('\n').map((l, i) => l.trim() ? <p key={i}>{l}</p> : null)}</div>
           )}
+          {!o.accessLocked && <Roadmap o={o} />}
           {!o.accessLocked && <AiChat path={`/public/opportunities/${o.id}/ai/chat`} />}
         </article>
         <aside className="card side">
@@ -65,7 +67,9 @@ export default function OpportunityDetail() {
             {o.nationalities?.length > 0 && (<><dt>الجنسيات</dt><dd>{o.nationalities.join('، ')}</dd></>)}
             {o.lastVerifiedAt && (<><dt>آخر تحقق</dt><dd>{date(o.lastVerifiedAt)}</dd></>)}
           </dl>
-          {(o.applyUrl || o.officialUrl) && (
+          {isClosed(o) ? (
+            <div className="alert alert-closed">التقديم على هالمنحة مغلق، انتهى آخر موعد.</div>
+          ) : (o.applyUrl || o.officialUrl) && (
             <a className="btn btn-primary btn-block" href={o.applyUrl || o.officialUrl} target="_blank" rel="noreferrer">التقديم من الموقع الرسمي ↗</a>
           )}
           {user ? (
@@ -77,6 +81,13 @@ export default function OpportunityDetail() {
             <Link className="btn btn-outline btn-block" to="/login" state={{ from: `/opportunities/${slug}` }}>سجّل دخول عشان تحفظها</Link>
           )}
           {msg && <p className="muted small">{msg}</p>}
+          {!isClosed(o) && (
+            <div className="service-box">
+              <strong>بدك تقدّم؟</strong>
+              <p className="muted small">استشارة مع فريق جامعتي، مراجعة أوراقك، والتقديم معك لحد ما يوصل طلبك.</p>
+              <Link className="btn btn-navy btn-block" to="/membership?plan=CONSULTATION">الاستشارة والتقديم (مدفوعة)</Link>
+            </div>
+          )}
           {o.sourceUrl && <p className="small muted">المصدر: <a href={o.sourceUrl} target="_blank" rel="noreferrer">{o.sourceName || 'الموقع الرسمي'}</a></p>}
         </aside>
       </div>
