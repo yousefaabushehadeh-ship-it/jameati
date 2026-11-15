@@ -6,6 +6,7 @@ import { useAuth } from '../lib/auth';
 import Icon from '../components/Icon';
 import { CatalogCard, Loading, LockedStrip, OpportunityCard, SectionHead } from '../components/ui';
 import { CATALOG } from '../lib/format';
+import ParentCompany from '../components/ParentCompany';
 
 function CatalogSection({ type, wide }) {
   const cfg = CATALOG[type];
@@ -76,6 +77,10 @@ export default function Home() {
       <CatalogSection type="COURSE" />
       <CatalogSection type="UNIVERSITY" wide />
       <CatalogSection type="SPECIALITY" />
+
+      <section className="container section">
+        <ParentCompany />
+      </section>
 
       {!user && (
         <section className="container section">

@@ -13,6 +13,7 @@ import { ForgotPassword, Login, Register, ResetPassword, VerifyEmail } from './p
 import Me from './pages/Me';
 import Membership from './pages/Membership';
 import Contact from './pages/Contact';
+import About from './pages/About';
 import NotFound from './pages/NotFound';
 import AdminDrafts from './pages/AdminDrafts';
 import { CATALOG } from './lib/format';
@@ -39,6 +40,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="verify-email" element={<VerifyEmail />} />
             <Route path="membership" element={<Membership />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<About />} />
             <Route path="me" element={<RequireAuth><Me /></RequireAuth>} />
             <Route path="admin/drafts" element={<RequireAuth><AdminDrafts /></RequireAuth>} />
             <Route path="*" element={<NotFound />} />
