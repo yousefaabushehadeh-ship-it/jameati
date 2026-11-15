@@ -127,7 +127,7 @@ function Footer() {
     ['اكتشف', [['/opportunities', 'كل الفرص'], ['/opportunities?category=منح دراسية', 'المنح الدراسية'], ['/opportunities?category=تدريب', 'تدريب'], ['/courses', 'الدورات'], ['/jobs', 'الوظائف'], ['/articles', 'المقالات']]],
     ['الأدلة', [['/universities', 'الجامعات'], ['/organizations', 'المؤسسات'], ['/specialities', 'التخصصات']]],
     ['أدواتك', [['/membership', 'عضوية جامعتي+'], ['/me', 'لوحة المستخدم'], ['/me?tab=favorites', 'الفرص المحفوظة']]],
-    ['جامعتي', [['/contact', 'تواصل معنا'], ['/contact', 'الأسئلة الشائعة']]],
+    ['جامعتي', [['/about', 'من نحن'], ['/contact', 'تواصل معنا'], ['/contact', 'الأسئلة الشائعة']]],
   ];
   return (
     <footer className="footer">
@@ -152,7 +152,7 @@ function Footer() {
           ))}
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} جامعتي — جميع الحقوق محفوظة.</span>
+          <span>© {new Date().getFullYear()} جامعتي — إحدى مبادرات <a href="https://steam-village.web.app/" target="_blank" rel="noopener noreferrer" className="link-sky">STEAM Village</a>. جميع الحقوق محفوظة.</span>
           <span>تحقق دائمًا من الشروط والمواعيد في المصدر الرسمي.</span>
         </div>
       </div>
